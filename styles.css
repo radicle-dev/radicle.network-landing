@@ -1,0 +1,66 @@
+/* Fonts */
+
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+/* Reset */
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+/* Variables */
+:root {
+}
+
+/* Styles */
+
+::selection {
+  background: fuchsia;
+  color: black;
+}
+
+* {
+  cursor: default;
+}
+
+body {
+  background-color: black;
+  font-weight: 450;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    var(--color-secondary-background) 0%,
+    var(--color-background) 30%
+  );
+}
+
+.heading {
+  color: var(--color-secondary);
+  padding: 1rem 0rem;
+  font-size: 1.25rem;
+}
+
+#container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
