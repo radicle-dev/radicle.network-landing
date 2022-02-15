@@ -15,6 +15,7 @@ html {
 :root {
   font-family: "Inter", sans-serif;
 }
+
 @supports (font-variation-settings: normal) {
   :root {
     font-family: "Inter var", sans-serif;
@@ -147,6 +148,12 @@ header p {
   box-shadow: 0 5rem 10rem inset var(--color-shadow);
   line-height: 150%;
   color: var(--color-foreground-5);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.terminal::-webkit-scrollbar {
+  display: none;
 }
 
 .terminal-highlight {
@@ -162,13 +169,21 @@ header p {
 .orgs {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
 }
 
 .org {
   list-style-type: none;
+  padding: 2rem 2rem 0 2rem;
+  border-radius: 1rem;
+  width: max-content;
 }
 
-.org > img {
+.org:hover {
+  background-color: #151f23;
+}
+
+.org img {
   display: block;
   border-radius: 50%;
   min-width: 1rem;
@@ -177,6 +192,20 @@ header p {
   object-fit: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 0.5rem;
+}
+
+.org a {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.org p {
+  color: var(--color-foreground-4);
+  font-size: 14px;
 }
 
 /* Forms */
