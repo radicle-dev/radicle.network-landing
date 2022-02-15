@@ -81,6 +81,8 @@ h3 {
 p {
   color: var(--color-foreground-faded);
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 /* Styles */
@@ -129,7 +131,7 @@ header {
 }
 
 header p {
-  max-width: 60rem;
+  max-width: 45rem;
 }
 
 .terminal {
@@ -140,10 +142,11 @@ header p {
   width: 80vw;
   margin: 0 auto;
   font-family: var(--font-family-monospace);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   overflow: scroll;
-  box-shadow: 0 50px 100px inset var(--color-shadow);
+  box-shadow: 0 5rem 10rem inset var(--color-shadow);
   line-height: 150%;
+  color: var(--color-foreground-5);
 }
 
 .terminal-highlight {
