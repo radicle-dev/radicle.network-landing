@@ -63,7 +63,7 @@ h1 {
   line-height: 1;
   text-align: center;
   letter-spacing: -0.3vw;
-  font-weight: 900;
+  font-weight: 150;
   margin-bottom: 2vw;
 }
 
@@ -120,13 +120,19 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 5rem 10vw;
+  margin: 5rem 10vw 2rem 10vw;
+}
+
+header p {
+  max-width: 60rem;
 }
 
 .terminal {
   background-color: black;
   border-radius: 0.5rem;
-  height: 500px;
+  height: 40vw;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .features {
