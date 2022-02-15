@@ -64,11 +64,11 @@ html {
 /* Typography */
 
 h1 {
-  font-size: 8vw;
+  font-size: 7vw;
   line-height: 1;
   text-align: center;
-  letter-spacing: -0.3vw;
-  font-weight: 150;
+  letter-spacing: -0.2vw;
+  font-weight: 900;
   margin-bottom: 2vw;
 }
 
