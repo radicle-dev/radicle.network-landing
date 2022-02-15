@@ -60,9 +60,9 @@
           (web) <span class="terminal-highlight">https://app.radicle.network/seeds/seed.cloudhead.io/projects/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo/</span><br>
           (web) <span class="terminal-highlight">https://app.radicle.network/seeds/seed.cloudhead.io/projects/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo/remotes/..</span><br>
           (git) <span class="terminal-highlight">https://seed.cloudhead.io/hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo.git</span>
-      </code>
+        </code>
 
-    </div>
+      </div>
 
     <section class="features">
       <div class="feature">
@@ -124,7 +124,24 @@
 
     <section class="get-started">
       <h3>Get started</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero praesentium fugiat, at expedita laudantium repudiandae velit! Placeat quis odio illo debitis vel, quod, aut eos itaque vero numquam magnam harum!</p>
+      <ol>
+        <li>Download the Radicle CLI <a href="#">here</a>.</li>
+        <li>
+          Run <code>rad auth</code> to create your Radicle identity.
+          <p class="grey">After this you’re authenticated and have a device key pair</p>
+        </li>
+        <li>
+          Go into an existing repo and run <code>rad init</code> to create a radicle project from the repo
+          <p class="grey">Ideally no name is specified here or your password is used (WHAT DOES THIS MEAN?????)</p>
+        </li>
+          - The project ID is shown to the user
+          1. Run `rad push` to publish to the network
+          2. User is told the project is published to the network and given a link to browse on the web from various seeds, eg.
+          [https://app.radicle.network/seeds/sprout.radicle.xyz/projects/](https://app.radicle.network/seeds/sprout.radicle.xyz/projects/)<urn>
+          [https://app.radicle.network/seeds/seedling.radicle.xyz/projects/](https://app.radicle.network/seeds/seedling.radicle.xyz/projects/)<urn>
+          3. User is told to share their project ID or the above URLs
+        </p>
+      </ol>
     </section>
 
   </div><!-- closes container -->
