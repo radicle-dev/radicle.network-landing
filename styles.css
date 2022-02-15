@@ -21,48 +21,94 @@ html {
   }
 }
 
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(assets/cascadia.woff2) format("woff2");
+}
+
 /* Reset */
 * {
   margin: 0;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: default;
 }
 
 /* Variables */
 :root {
+  --color-primary: #ff55ff;
+  --color-secondary: #5555ff;
+  --color-secondary-background: #5555ff11;
+  --color-tertiary: #55ffff;
+  --color-positive: #53db53;
+  --color-caution: #ffc555;
+  --color-negative: #ff5555;
+  --color-foreground: #ffffff;
+  --color-foreground-1: #242e38;
+  --color-foreground-2: #29343d;
+  --color-foreground-3: #333e47;
+  --color-foreground-4: #5e6d7a;
+  --color-foreground-5: #8594a1;
+  --color-foreground-6: #d3dee8;
+  --color-background: #0b131a;
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-glow: #5555ff22;
+  --font-family-sans-serif: Inter, sans-serif;
+  --font-family-monospace: "Cascadia Code";
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --border-radius: 50px;
+  --box-shadow-color: var(--color-secondary-2);
 }
 
-/* Styles */
+/* Typography */
 
-::selection {
-  background: fuchsia;
-  color: black;
-}
-
-* {
-  cursor: default;
-}
-
-body {
-  background-color: black;
-  font-weight: 450;
-  color: white;
-  background: linear-gradient(
-    180deg,
-    var(--color-secondary-background) 0%,
-    var(--color-background) 30%
-  );
-}
-
-#container {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
+h1 {
+  font-size: 7vw;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -0.2vw;
+  font-weight: 900;
+  margin-bottom: 2vw;
 }
 
 h3 {
   color: var(--color-secondary);
   padding: 1rem 0rem;
   font-size: 1.25rem;
+}
+
+p {
+  color: var(--color-foreground-faded);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Styles */
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+body {
+  background: linear-gradient(
+        180deg,
+        var(--color-secondary-background) 0%,
+        transparent 30%,
+        transparent 100%
+      )
+      no-repeat,
+    var(--color-background);
+  font-weight: 450;
+  color: white;
+}
+
+#container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .topbar {
@@ -73,19 +119,38 @@ h3 {
 
 header,
 section {
-  max-width: 68rem;
   margin: 2rem auto;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5rem 10vw 2rem 10vw;
 }
 
-.right-box {
-  background-color: black;
-  border-radius: 0.5rem;
+header p {
+  max-width: 45rem;
+}
+
+.terminal {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: var(--border-radius);
+  height: 40vw;
+  width: 80vw;
+  margin: 0 auto;
+  font-family: var(--font-family-monospace);
+  font-size: 1.2rem;
+  overflow: scroll;
+  box-shadow: 0 5rem 10rem inset var(--color-shadow);
+  line-height: 150%;
+  color: var(--color-foreground-5);
+}
+
+.terminal-highlight {
+  color: var(--color-positive);
 }
 
 .features {
@@ -108,9 +173,23 @@ header {
   border-radius: 50%;
   min-width: 1rem;
   min-height: 1rem;
-  height: 100%;
   width: 4rem;
   object-fit: cover;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Forms */
+
+button {
+  background: transparent;
+  border: 1px solid var(--color-foreground-6);
+  border-radius: var(--border-radius);
+  color: var(--color-foreground-6);
+  cursor: pointer;
+  font-family: var(--font-family-sans-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0.5rem 1.25rem;
+  width: fit-content;
 }
