@@ -79,7 +79,8 @@ body {
   background: linear-gradient(
         180deg,
         var(--color-secondary-background) 0%,
-        var(--color-background) 30%
+        transparent 30%,
+        transparent 100%
       )
       no-repeat,
     var(--color-background);
