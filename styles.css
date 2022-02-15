@@ -21,6 +21,11 @@ html {
   }
 }
 
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(assets/cascadia.woff2) format("woff2");
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -49,7 +54,7 @@ html {
   --color-shadow: rgba(0, 0, 0, 0.2);
   --color-glow: #5555ff22;
   --font-family-sans-serif: Inter, sans-serif;
-  --font-family-monospace: monospace;
+  --font-family-monospace: "Cascadia Code";
   --font-weight-medium: 600;
   --font-weight-bold: 700;
   --border-radius: 50px;
@@ -128,11 +133,21 @@ header p {
 }
 
 .terminal {
-  background-color: black;
-  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: var(--border-radius);
   height: 40vw;
   width: 80vw;
   margin: 0 auto;
+  font-family: var(--font-family-monospace);
+  font-size: 1.5rem;
+  overflow: scroll;
+  box-shadow: 0 50px 100px inset var(--color-shadow);
+  line-height: 150%;
+}
+
+.terminal-highlight {
+  color: var(--color-positive);
 }
 
 .features {
