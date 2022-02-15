@@ -77,10 +77,11 @@ p {
 
 body {
   background: linear-gradient(
-      180deg,
-      var(--color-secondary-background) 0%,
-      var(--color-background) 30%
-    ),
+        180deg,
+        var(--color-secondary-background) 0%,
+        var(--color-background) 30%
+      )
+      no-repeat,
     var(--color-background);
   font-weight: 450;
   color: white;
