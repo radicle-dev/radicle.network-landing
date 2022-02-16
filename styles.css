@@ -23,8 +23,13 @@ html {
 }
 
 @font-face {
+  font-family: "Flexa";
+  src: url(assets/flexa-mono-black.woff2) format("woff2");
+}
+
+@font-face {
   font-family: "Cascadia Code";
-  src: url(assets/cascadia.woff2) format("woff2");
+  src: url(assets/cascadia-real.woff2) format("woff2");
 }
 
 /* Reset */
@@ -73,6 +78,7 @@ html {
 
 h1 {
   font-size: var(--font-size-large);
+  font-family: "Flexa", monospace;
   line-height: 1;
   text-align: center;
   letter-spacing: -0.2vw;
@@ -88,7 +94,7 @@ h3 {
 p {
   color: var(--color-foreground-faded);
   font-size: var(--font-size-normal);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 code {
@@ -104,25 +110,19 @@ code {
 /* Styles */
 
 ::selection {
-  background: var(--color-primary);
+  background: rgba(255, 255, 0, 0.9);
   color: var(--color-background);
 }
 
 body {
-  background: linear-gradient(
-        180deg,
-        var(--color-secondary-background) 0%,
-        transparent 30%,
-        transparent 100%
-      )
-      no-repeat,
-    var(--color-background);
+  background: var(--color-background);
   font-weight: 450;
   color: white;
+  animation: colorful 20s ease infinite;
 }
 
 #container {
-  padding: 5vw;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -136,6 +136,7 @@ body {
 header,
 section {
   margin: 2rem auto;
+  padding: 0 5vw;
 }
 
 header {
@@ -147,8 +148,8 @@ header {
 }
 
 header p {
-  max-width: 35rem;
-  color: var(--color-foreground-5);
+  max-width: 53rem;
+  color: var(--color-foreground);
 }
 
 .terminal {
@@ -158,7 +159,6 @@ header p {
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-medium);
   overflow: scroll;
-  box-shadow: 0 5rem 10rem inset var(--color-shadow);
   line-height: 150%;
   color: var(--color-foreground-5);
   -ms-overflow-style: none; /* IE and Edge */
@@ -208,7 +208,6 @@ header p {
 /* Explore orgs */
 
 section.explore {
-  width: 100%;
   text-align: center;
 }
 
@@ -221,13 +220,13 @@ section.explore {
 
 .org {
   list-style-type: none;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
   border-radius: 1rem;
   width: max-content;
 }
 
 .org:hover {
-  background-color: #151f23;
+  background-color: var(--color-black-30);
 }
 
 .org img {
