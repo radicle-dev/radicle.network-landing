@@ -40,6 +40,7 @@ html {
   --color-primary: #ff55ff;
   --color-secondary: #5555ff;
   --color-secondary-background: #5555ff11;
+  --color-black-30: rgba(0, 0, 0, 0.3);
   --color-tertiary: #55ffff;
   --color-positive: #53db53;
   --color-caution: #ffc555;
@@ -152,7 +153,7 @@ header p {
 }
 
 .terminal {
-  background-color: black;
+  background-color: var(--color-black-30);
   border-radius: var(--border-radius-large);
   padding: var(--border-radius-large);
   height: 40vw;
@@ -184,20 +185,20 @@ header p {
 }
 
 .features {
-  display: flex;
-  flex-direction: row;
-  /* grid-template-columns: repeat(3, 1fr); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  width: 100%;
 }
 
 .feature {
-  display: flex;
-  flex-direction: column;
   padding: 2vw;
-  background: black;
+  background: var(--color-black-30);
   border-radius: 1rem;
-  width: 30%;
+  flex-grow: 1;
+}
+
+.feature img {
+  width: 100%;
 }
 
 /* Explore orgs */
