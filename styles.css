@@ -153,8 +153,8 @@ header p {
 
 .terminal {
   background-color: var(--color-black-30);
-  border-radius: var(--border-radius-large);
-  padding: var(--border-radius-large);
+  border-radius: var(--border-radius-medium);
+  padding: var(--border-radius-medium);
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-medium);
   overflow: scroll;
@@ -164,6 +164,8 @@ header p {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   white-space: nowrap;
+  width: 70%;
+  align-self: center;
 }
 
 .terminal::-webkit-scrollbar {
@@ -207,12 +209,14 @@ header p {
 
 section.explore {
   width: 100%;
+  text-align: center;
 }
 
 .orgs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+  display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .org {
