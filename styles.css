@@ -58,14 +58,20 @@ html {
   --font-family-monospace: "Cascadia Code";
   --font-weight-medium: 600;
   --font-weight-bold: 700;
-  --border-radius: 50px;
+  --font-size-large: 7vw;
+  --font-size-medium: 1.75vw;
+  --font-size-normal: 1rem;
+  --font-size-small: 0.5vw;
+  --border-radius-large: 4vw;
+  --border-radius-medium: 2vw;
+  --border-radius-tiny: 0.5vw;
   --box-shadow-color: var(--color-secondary-2);
 }
 
 /* Typography */
 
 h1 {
-  font-size: 7vw;
+  font-size: var(--font-size-large);
   line-height: 1;
   text-align: center;
   letter-spacing: -0.2vw;
@@ -76,14 +82,24 @@ h1 {
 h3 {
   color: var(--color-secondary);
   padding: 1rem 0rem;
-  font-size: 1.25rem;
+  font-size: var(--font-size-medium);
 }
 
 p {
   color: var(--color-foreground-faded);
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: var(--font-size-normal);
   font-weight: 300;
+}
+
+code {
+  font-family: var(--font-family-monospace);
+  letter-spacing: 0.1rem;
+  font-size: var(--font-size-normal);
+  background: var(--color-secondary);
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--border-radius-tiny);
 }
 
 /* Styles */
@@ -107,7 +123,7 @@ body {
 }
 
 #container {
-  padding: 1.5rem;
+  padding: 5vw;
   display: flex;
   flex-direction: column;
 }
@@ -128,7 +144,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 5rem 10vw 2rem 10vw;
+  margin: 5vw;
 }
 
 header p {
@@ -136,14 +152,12 @@ header p {
 }
 
 .terminal {
-  background-color: var(--color-background);
-  border-radius: var(--border-radius);
-  padding: var(--border-radius);
+  background-color: black;
+  border-radius: var(--border-radius-large);
+  padding: var(--border-radius-large);
   height: 40vw;
-  width: 80vw;
-  margin: 0 auto;
   font-family: var(--font-family-monospace);
-  font-size: 1.2rem;
+  font-size: var(--font-size-medium);
   overflow: scroll;
   box-shadow: 0 5rem 10rem inset var(--color-shadow);
   line-height: 150%;
@@ -160,10 +174,35 @@ header p {
   color: var(--color-positive);
 }
 
+.download-cli {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: var(--font-size-medium);
+}
+
 .features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: 1.5rem;
+  width: 100%;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  background: black;
+  border-radius: 1rem;
+  width: 30%;
+}
+
+/* Explore orgs */
+
+section.explore {
 }
 
 .orgs {
@@ -205,7 +244,14 @@ header p {
 
 .org p {
   color: var(--color-foreground-4);
-  font-size: 14px;
+  font-size: var(--font-size-normal);
+  white-space: nowrap;
+}
+
+/* Get started */
+
+section.get-started {
+  font-size: var(--font-size-normal);
 }
 
 /* Forms */
@@ -213,11 +259,11 @@ header p {
 button {
   background: transparent;
   border: 1px solid var(--color-foreground-6);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-medium);
   color: var(--color-foreground-6);
   cursor: pointer;
   font-family: var(--font-family-sans-serif);
-  font-size: 1rem;
+  font-size: var(--font-size-normal);
   line-height: 1.6;
   padding: 0.5rem 1.25rem;
   width: fit-content;
