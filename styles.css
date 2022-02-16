@@ -81,14 +81,12 @@ h1 {
 }
 
 h3 {
-  color: var(--color-secondary);
   padding: 1rem 0rem;
   font-size: var(--font-size-medium);
 }
 
 p {
   color: var(--color-foreground-faded);
-  margin-bottom: 2rem;
   font-size: var(--font-size-normal);
   font-weight: 300;
 }
@@ -149,7 +147,8 @@ header {
 }
 
 header p {
-  max-width: 45rem;
+  max-width: 35rem;
+  color: var(--color-foreground-5);
 }
 
 .terminal {
@@ -194,7 +193,10 @@ header p {
   padding: 2vw;
   background: var(--color-black-30);
   border-radius: 1rem;
-  flex-grow: 1;
+}
+
+.feature p {
+  color: var(--color-foreground-5);
 }
 
 .feature img {
@@ -244,7 +246,7 @@ section.explore {
 }
 
 .org p {
-  color: var(--color-foreground-4);
+  color: var(--color-foreground-5);
   font-size: var(--font-size-normal);
   white-space: nowrap;
 }
