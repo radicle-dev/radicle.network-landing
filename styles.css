@@ -155,7 +155,6 @@ header p {
   background-color: var(--color-black-30);
   border-radius: var(--border-radius-large);
   padding: var(--border-radius-large);
-  height: 40vw;
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-medium);
   overflow: scroll;
@@ -164,6 +163,7 @@ header p {
   color: var(--color-foreground-5);
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  white-space: nowrap;
 }
 
 .terminal::-webkit-scrollbar {
