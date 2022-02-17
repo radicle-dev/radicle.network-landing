@@ -203,6 +203,11 @@ button {
   align-items: center;
 }
 
+.home,
+.home svg {
+  cursor: pointer;
+}
+
 button.no-border {
   border: none;
 }
