@@ -239,13 +239,20 @@ section.cli-section {
 .get-started {
   font-size: var(--font-size-normal);
   text-align: left;
-  margin: 0 auto;
-  width: 960px;
-  max-width: 60rem;
+  width: 25vw;
+  max-width: 27rem;
   padding-right: 2vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.get-started p {
+  color: var(--color-foreground-5);
+}
+
+.get-started button {
+  margin-top: 2rem;
 }
 
 .get-started a {
@@ -369,6 +376,10 @@ section.explore {
   color: var(--color-foreground-5);
   font-size: var(--font-size-normal);
   white-space: nowrap;
+}
+
+.footer {
+  color: var(--color-foreground-5);
 }
 
 @media (min-width: 1600px) {
