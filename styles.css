@@ -225,6 +225,7 @@ header {
 header p {
   max-width: 55rem;
   color: var(--color-foreground);
+  margin-bottom: 2rem;
 }
 
 /* CLI Section */
@@ -238,8 +239,9 @@ section.cli-section {
 .get-started {
   font-size: var(--font-size-normal);
   text-align: left;
-  width: 30vw;
-  max-width: 27rem;
+  margin: 0 auto;
+  width: 960px;
+  max-width: 60rem;
   padding-right: 2vw;
   display: flex;
   justify-content: center;
@@ -264,17 +266,15 @@ section.cli-section {
 
 .terminal {
   background-color: var(--color-black-30);
+  color: var(--color-foreground-5);
   border-radius: var(--border-radius-medium);
   padding: var(--border-radius-medium);
   font-family: var(--font-family-monospace);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-normal);
   overflow: scroll;
   line-height: 150%;
-  color: var(--color-foreground-5);
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  white-space: nowrap;
-  width: 70%;
   align-self: center;
   text-align: left;
   height: max-content;
@@ -286,6 +286,9 @@ section.cli-section {
 
 .terminal-highlight {
   color: var(--color-positive);
+}
+.terminal-highlight-blue {
+  color: var(--color-secondary);
 }
 
 .features {
