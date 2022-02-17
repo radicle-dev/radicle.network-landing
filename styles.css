@@ -106,9 +106,10 @@ span.headline-publish {
   border-radius: 100%;
 }
 
-span.headline-view::after {
+span.headline-view::before {
   content: "👀";
-  margin-left: -1vw;
+  margin-left: -2vw;
+  margin-top: 6vw;
   position: absolute;
   font-size: 5vw;
 }
