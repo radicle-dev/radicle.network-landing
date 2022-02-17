@@ -187,8 +187,8 @@ a {
 button {
   background: transparent;
   border: 1px solid var(--color-foreground-6);
-  border-radius: var(--border-radius-medium);
   color: var(--color-foreground-6);
+  border-radius: var(--border-radius-medium);
   cursor: pointer;
   font-family: var(--font-family-sans-serif);
   font-size: var(--font-size-normal);
@@ -205,6 +205,11 @@ button {
 
 button.no-border {
   border: none;
+}
+
+button.primary {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 section {
