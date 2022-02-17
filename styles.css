@@ -247,6 +247,12 @@ section.cli-section {
   flex-direction: column;
 }
 
+.get-started-page {
+  margin: 0 auto;
+  width: 60rem;
+  max-width: 90rem;
+}
+
 .get-started p {
   color: var(--color-foreground-5);
 }
