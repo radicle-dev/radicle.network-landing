@@ -386,12 +386,12 @@ section.explore {
 
 @media (max-width: 800px) {
   :root {
-    --font-size-medium: 0.9rem;
+    --font-size-medium: 1.1rem;
     --font-size-normal: 0.9rem;
     --font-size-small: 0.5vw;
     --border-radius-large: 4vw;
     --border-radius-medium: 2vw;
-    --border-radius-tiny: 0.5rem;
+    --border-radius-tiny: 0.25rem;
   }
 
   .features {
@@ -403,5 +403,24 @@ section.explore {
 
   h1 {
     margin-bottom: 2rem;
+  }
+
+  section.cli-section {
+    flex-direction: column;
+  }
+
+  .get-started {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .terminal {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  code {
+    padding: 0.2rem 0.3rem 0.2rem 0.5rem;
   }
 }
