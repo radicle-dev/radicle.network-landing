@@ -111,8 +111,8 @@ span.headline-publish {
 }
 
 span.headline-view::before {
-  content: "👀";
-  margin-left: -2vw;
+  content: "📢";
+  margin-left: 15vw;
   margin-top: 5.5vw;
   position: absolute;
   font-size: 5vw;
