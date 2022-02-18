@@ -290,6 +290,7 @@ section.cli-section {
 
 .get-started-page {
   margin: 0 auto;
+  margin-top: 4vw;
   width: 60rem;
   max-width: 90rem;
 }
@@ -306,15 +307,18 @@ section.cli-section {
   border-bottom: 1px solid;
 }
 
+.get-started ol {
+  margin-top: 2rem;
+}
+
 .get-started ol li {
-  margin: 1vw 0;
-  line-height: 1.25;
+  margin: 2rem 0;
+  font-size: 1.25rem;
 }
 
 .get-started ol li .note {
-  color: var(--color-foreground-4);
-  font-style: italic;
-  margin: 0.5vw 0 1vw;
+  color: var(--color-foreground-5);
+  margin: 2rem 0;
   word-wrap: break-word;
 }
 
@@ -343,6 +347,10 @@ section.cli-section {
 }
 .terminal-highlight-blue {
   color: var(--color-secondary);
+}
+
+.get-started .terminal {
+  margin: 2rem 0;
 }
 
 .features {

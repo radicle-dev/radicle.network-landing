@@ -39,10 +39,14 @@
     <div class="get-started get-started-page">
       <h1>Get started</h1>
       <ol>
-        <li>Download the Radicle CLI <a href="#">here</a>.</li>
+        <li>
+          Download and install the <code>radicle-client-tools</code> CLI <a href="#">here</a>.
+          <p class="note">Radicle was designed to be used on the CLI, both offline and online.</p>
+        </li>
         <li>
           Run <code>rad auth</code> to create your Radicle identity.
-          <p class="note">This authenticates you and gives you a device key pair.</p>
+          <p class="note">The first time you run this, it authenticates you
+          on your device and generates a new key pair.</p>
           <pre class="terminal">
 $ rad auth<br/>
 Initializing your 🌱 profile and identity
@@ -58,14 +62,18 @@ Your personal 🌱 URN is <span class="terminal-highlight">rad:git:hnrkmx6trm4bu
 
 <span class="terminal-highlight-blue">=></span> To create a radicle project, run <span class="terminal-highlight-blue">`rad init`</span> from a git repository.</pre>
         </li>
+
         <li>
-          Navigate to an existing git repo on your machine.
+          Navigate to an existing <strong>git repository</strong> on your device.
+          <p class="note">Radicle is built around git.</p>
           <pre class="terminal">
 $ cd acme</pre>
         </li>
+
         <li>
-          Run <code>rad init</code> to create a Radicle project from the repo.
-          <p class="note">Ideally no name is specified here or your password is used.</p>
+          Run <code>rad init</code> to create a Radicle <strong>project</strong> from the repo.
+          <p class="note">This creates a <strong>unique peer-to-peer identity</strong> for your
+          repository that can be shared on the network, and associates your radicle key with it.</p>
           <pre class="terminal">
 $ rad init
 Initializing local 🌱 project <span class="terminal-highlight">cloudhead.io</span>
