@@ -97,35 +97,35 @@ h1 {
   line-height: 1.1;
   text-align: center;
   letter-spacing: -0.2vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 
-span.headline-easily {
+span.headline-underline {
   border-bottom: 0.5vw solid white;
 }
 
-span.headline-publish {
+span.headline-dashed {
   border: 0.5vw dashed var(--color-primary);
   padding: 2vw;
   border-radius: 100%;
 }
 
-span.headline-view::before {
-  content: "📢";
-  margin-left: 15vw;
+span.headline-emoji::before {
+  content: "👀";
+  margin-left: 7vw;
   margin-top: 5.5vw;
   position: absolute;
   font-size: 5vw;
 }
 
-span.headline-code {
+span.headline-yellow-bg {
   background: var(--color-caution-20);
   color: var(--color-caution);
   padding: 0 1vw;
   border-radius: var(--border-radius-medium);
 }
 
-span.headline-radicle {
+span.headline-green {
   color: var(--color-positive);
 }
 
