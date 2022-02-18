@@ -85,6 +85,10 @@ html {
 
 /* Typography */
 
+body {
+  line-height: 1.5;
+}
+
 h1 {
   font-size: var(--font-size-large);
   color: var(--color-secondary);
@@ -93,41 +97,42 @@ h1 {
   line-height: 1.1;
   text-align: center;
   letter-spacing: -0.2vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 
-span.headline-easily {
+span.headline-underline {
   border-bottom: 0.5vw solid white;
 }
 
-span.headline-publish {
+span.headline-dashed {
   border: 0.5vw dashed var(--color-primary);
-  padding: 2vw;
+  padding: 0 2vw 2vw;
   border-radius: 100%;
 }
 
-span.headline-view::before {
+span.headline-emoji::before {
   content: "👀";
-  margin-left: -2vw;
+  margin-left: 7vw;
   margin-top: 5.5vw;
   position: absolute;
   font-size: 5vw;
 }
 
-span.headline-code {
+span.headline-yellow-bg {
   background: var(--color-caution-20);
   color: var(--color-caution);
   padding: 0 1vw;
   border-radius: var(--border-radius-medium);
 }
 
-span.headline-radicle {
+span.headline-green {
   color: var(--color-positive);
 }
 
 h3 {
   padding: 1rem 0rem;
   font-size: var(--font-size-medium);
+  font-weight: normal;
 }
 
 p {
@@ -198,6 +203,11 @@ button {
   width: fit-content;
 }
 
+button:hover {
+  background-color: var(--color-foreground-6);
+  color: var(--color-background);
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -213,9 +223,30 @@ button.no-border {
   border: none;
 }
 
+button.no-border:hover {
+  color: var(--color-foregorund-6);
+  background: none;
+}
+
 button.primary {
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border: none;
+  color: var(--color-background);
+  font-weight: 600;
+  background: linear-gradient(80deg, #5555ff, 20%, #ff55ff);
+}
+
+button.primary:hover {
+  box-shadow: 0 0 2rem #ff55ff77;
+}
+
+button.secondary {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+button.secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
 }
 
 section {
@@ -260,6 +291,7 @@ section.cli-section {
 
 .get-started-page {
   margin: 0 auto;
+  margin-top: 4vw;
   width: 60rem;
   max-width: 90rem;
 }
@@ -276,22 +308,25 @@ section.cli-section {
   border-bottom: 1px solid;
 }
 
+.get-started ol {
+  margin-top: 2rem;
+}
+
 .get-started ol li {
-  margin: 1vw 0;
-  line-height: 1.25;
+  margin: 2rem 0;
+  font-size: 1.25rem;
 }
 
 .get-started ol li .note {
-  color: var(--color-foreground-4);
-  font-style: italic;
-  margin: 0.5vw 0 1vw;
+  color: var(--color-foreground-5);
+  margin: 2rem 0;
   word-wrap: break-word;
 }
 
 .terminal {
   background-color: var(--color-black-30);
-  color: var(--color-foreground-5);
-  border-radius: var(--border-radius-medium);
+  color: var(--color-foreground-6);
+  border-radius: 0.5rem;
   padding: var(--border-radius-medium);
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-normal);
@@ -315,6 +350,10 @@ section.cli-section {
   color: var(--color-secondary);
 }
 
+.get-started .terminal {
+  margin: 2rem 0;
+}
+
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -324,7 +363,7 @@ section.cli-section {
 
 .feature {
   padding: 2vw;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--color-foreground-1);
   text-align: left;
 }
@@ -335,8 +374,6 @@ section.cli-section {
 
 .feature img {
   width: 100%;
-  padding-bottom: 2vw;
-  border-bottom: 1px solid var(--color-foreground-1);
 }
 
 /* Explore orgs */
