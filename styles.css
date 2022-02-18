@@ -238,6 +238,16 @@ button.primary:hover {
   color: var(--color-background);
 }
 
+button.secondary {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+button.secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
+
 section {
   margin: 5vw auto;
   padding: 0 5vw;
