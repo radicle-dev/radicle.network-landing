@@ -229,13 +229,14 @@ button.no-border:hover {
 }
 
 button.primary {
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border: none;
+  color: var(--color-background);
+  font-weight: 600;
+  background: linear-gradient(80deg, #5555ff, 20%, #ff55ff);
 }
 
 button.primary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-background);
+  box-shadow: 0 0 2rem #ff55ff77;
 }
 
 button.secondary {
