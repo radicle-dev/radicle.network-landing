@@ -324,7 +324,7 @@ section.cli-section {
 
 .terminal {
   background-color: var(--color-black-30);
-  color: var(--color-foreground-5);
+  color: var(--color-foreground-6);
   border-radius: 0.5rem;
   padding: var(--border-radius-medium);
   font-family: var(--font-family-monospace);
