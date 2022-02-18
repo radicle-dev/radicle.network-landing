@@ -106,7 +106,7 @@ span.headline-underline {
 
 span.headline-dashed {
   border: 0.5vw dashed var(--color-primary);
-  padding: 2vw;
+  padding: 0 2vw 2vw;
   border-radius: 100%;
 }
 
