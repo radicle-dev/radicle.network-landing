@@ -111,11 +111,11 @@ span.headline-dashed {
 }
 
 span.headline-emoji::before {
-  content: "👀";
-  margin-left: 7vw;
-  margin-top: 5.5vw;
+  content: "✨";
+  margin-left: 12vw;
+  margin-top: 5vw;
   position: absolute;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 span.headline-yellow-bg {
