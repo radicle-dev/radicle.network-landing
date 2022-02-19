@@ -45,14 +45,14 @@
         </li>
         <li>
           Run <code>rad auth</code> to create your Radicle identity.
-          <p class="note">The first time you run this, it authenticates you
-          on your device and generates a new key pair.</p>
+          <p class="note">The first time you run <code>rad auth</code>, you are
+          prompted to create a new radicle identity and Ed25519 keypair.</p>
           <pre class="terminal">
-$ rad auth<br/>
+$ <span>rad auth</span>
 Initializing your 🌱 profile and identity
 
-<span class="terminal-highlight">ok</span> Username · koops
-<span class="terminal-highlight">ok</span> Passphrase · ********
+<span class="terminal-highlight">ok</span> Username · <span class="terminal-dim">koops</span>
+<span class="terminal-highlight">ok</span> Passphrase · <span class="terminal-dim">********</span>
 <span class="terminal-highlight">ok</span> Creating your 🌱 Ed25519 keypair...
 <span class="terminal-highlight">ok</span> Adding to ssh-agent...
 <span class="terminal-highlight">ok</span> Profile 3ae66df3-6ac7-4466-9013-83839749ed05 created.
@@ -66,8 +66,7 @@ Your personal 🌱 URN is <span class="terminal-highlight">rad:git:hnrkmx6trm4bu
         <li>
           Navigate to an existing <strong>git repository</strong> on your device.
           <p class="note">Radicle is built around git.</p>
-          <pre class="terminal">
-$ cd acme</pre>
+          <pre class="terminal">$ cd radicle-client-services</pre>
         </li>
 
         <li>
@@ -76,23 +75,40 @@ $ cd acme</pre>
           repository that can be shared on the network, and associates your radicle key with it.</p>
           <pre class="terminal">
 $ rad init
-Initializing local 🌱 project <span class="terminal-highlight">cloudhead.io</span>
+Initializing local 🌱 project <span class="terminal-highlight">radicle-client-services</span>
 
-<span class="terminal-highlight">ok</span> Description · My website
-<span class="terminal-highlight">ok</span> Default branch · master
-<span class="terminal-highlight">ok</span> Initializing new project in /home/cloudhead/src/cloudhead.io...
-<span class="terminal-highlight">ok</span> Project initialized: <span class="terminal-highlight">rad:git:hnrkq3fkht4mxn6oz449wh598jer7nj3iupty</span>
+<span class="terminal-highlight">ok</span> Description · <span class="terminal-dim">Radicle's client services</span>
+<span class="terminal-highlight">ok</span> Default branch · <span class="terminal-dim">master</span>
+<span class="terminal-highlight">ok</span> Initializing new project...
+<span class="terminal-highlight">ok</span> Project initialized: <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo</span>
 
 <span class="terminal-highlight-blue">=></span> To publish, run <span class="terminal-highlight-blue">`rad push`</span>.</pre>
         </li>
         <li>
           Run <code>rad push</code> to publish to the network
-          <pre class="terminal">
-$ rad sync
-Git version 2.34.1
-Git signing key ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL460KIEccS4881p7PPpiiQBsxF+H5tgC6De6crw9rbU
+          <p class="note">
+            The first time you push, you will be asked to select a seed node to push to.
+            To push to your own seed, specify its address with the <code>--seed</code> option.
+          </p>
+<pre class="terminal">
+$ rad push
+Pushing 🌱 to remote `rad`<span class="terminal-dim">
+Everything up-to-date</span>
 
-Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo</span> to <span class="terminal-highlight">http://0.0.0.0:8778/</span>
+Git version 2.34.1
+Select a seed node to sync with...
+<span class="terminal-yellow">* pine.radicle.garden</span>
+<span class="terminal-yellow">* <span class="terminal-selected">willow.radicle.garden</span></span>
+<span class="terminal-yellow">* maple.radicle.garden</span>
+</pre>
+</li>
+
+<li>
+  Your code is synced to the seed and available via the web, or via git.
+<pre class="terminal">
+Git signing key <span class="terminal-dim">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL460KIEccS4881p7PPpiiQBsxF+H5tgC6De6crw9rbU</span>
+
+Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo</span> to <span class="terminal-highlight">https://willow.radicle.garden</span>
 
 <span class="terminal-highlight">ok</span> Syncing delegate identity hnrkqdpm9ub19oc8dccx44echy76hzfsezyio...
 <span class="terminal-highlight">ok</span> Syncing project identity...
@@ -102,14 +118,9 @@ Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54
 
 🌱 Your project is synced and available at:
 
-    (web) <span class="terminal-highlight">https://app.radicle.network/seeds/seed.cloudhead.io/projects/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo/</span>
-    (web) <span class="terminal-highlight">https://app.radicle.network/seeds/seed.cloudhead.io/projects/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo/remotes/..</span>
-    (git) <span class="terminal-highlight">https://seed.cloudhead.io/hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo.git</span>
-            </pre>
-        </li>
-        <li>
-          View and share your Radicle project from a URL on app.radicle.network.
-          <p class="note">For example: https://app.radicle.network/seeds/seed.cloudhead.io/projects/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo</p>
+    (web) <span class="terminal-highlight">https://app.radicle.network/seeds/willow.radicle.garden/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo/</span>
+    (git) <span class="terminal-highlight">https://willow.radicle.garden/hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo.git</span>
+</pre>
         </li>
       </ol>
     </div><!-- closes get started -->

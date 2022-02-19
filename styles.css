@@ -349,6 +349,16 @@ section.cli-section {
 .terminal-highlight-blue {
   color: var(--color-secondary);
 }
+.terminal-dim {
+  color: var(--color-foreground-5) !important;
+}
+.terminal-yellow {
+  color: #cccc55 !important;
+}
+.terminal-selected {
+  color: #222;
+  background: #cccc55 !important;
+}
 
 .get-started .terminal {
   margin: 2rem 0;
