@@ -390,7 +390,7 @@ section.explore {
   text-align: center;
 }
 
-.orgs {
+.seeds {
   margin: 0;
   display: flex;
   gap: 2rem;
@@ -398,19 +398,19 @@ section.explore {
   justify-content: center;
 }
 
-.org {
+.seed {
   list-style-type: none;
   padding: 2rem;
   border-radius: 1rem;
   width: max-content;
 }
 
-.org,
-.org * {
+.seed,
+.seed * {
   cursor: pointer;
 }
 
-.org:hover {
+.seed:hover {
   background-color: var(--color-black-30);
 }
 
@@ -422,19 +422,7 @@ section.explore {
   visibility: hidden;
 }
 
-.org img {
-  display: block;
-  border-radius: 50%;
-  min-width: 1rem;
-  min-height: 1rem;
-  width: 4rem;
-  object-fit: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 0.5rem;
-}
-
-.org a {
+.seed a {
   color: white;
   display: flex;
   flex-direction: column;
@@ -442,7 +430,7 @@ section.explore {
   gap: 0.5rem;
 }
 
-.org p {
+.seed p {
   color: var(--color-foreground-5);
   font-size: var(--font-size-normal);
   white-space: nowrap;
