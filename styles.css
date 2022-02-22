@@ -106,16 +106,16 @@ span.headline-underline {
 
 span.headline-dashed {
   border: 0.5vw dashed var(--color-primary);
-  padding: 0 2vw 2vw;
+  padding: 2vw;
   border-radius: 100%;
 }
 
-span.headline-emoji::before {
+span.headline-emoji::after {
   content: "✨";
-  margin-left: 12vw;
-  margin-top: 5vw;
   position: absolute;
-  font-size: 3vw;
+  margin-left: -24%;
+  margin-top: -2%;
+  font-size: 6vw;
 }
 
 span.headline-yellow-bg {
@@ -265,7 +265,7 @@ header {
 }
 
 header p {
-  max-width: 55rem;
+  max-width: 45rem;
   color: var(--color-foreground);
   margin-bottom: 2rem;
 }
