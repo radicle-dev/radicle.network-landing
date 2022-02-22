@@ -74,7 +74,7 @@ html {
   --font-weight-medium: 600;
   --font-weight-bold: 700;
   --font-size-large: 8vw;
-  --font-size-medium: 1.75vw;
+  --font-size-medium: 2vw;
   --font-size-normal: 1rem;
   --font-size-small: 0.5vw;
   --border-radius-large: 4vw;
@@ -194,7 +194,7 @@ button, a.button {
   background: transparent;
   border: 1px solid var(--color-foreground-6);
   color: var(--color-foreground-6);
-  border-radius: var(--border-radius-medium);
+  border-radius: 2rem;
   cursor: pointer;
   font-family: var(--font-family-sans-serif);
   font-size: var(--font-size-normal);
@@ -313,19 +313,18 @@ section.cli-section {
 }
 
 .get-started ol li {
-  margin: 2rem 0;
+  margin: 0 0 3rem 0;
   font-size: 1.25rem;
 }
 
 .get-started ol li .note {
   color: var(--color-foreground-5);
-  margin: 2rem 0;
+  margin-top: 1rem;
   word-wrap: break-word;
 }
 
 .terminal {
   background-color: var(--color-black-30);
-  background-color: red;
   color: var(--color-foreground-6);
   border-radius: 0.5rem;
   padding: var(--border-radius-medium);
@@ -362,7 +361,7 @@ section.cli-section {
 }
 
 .get-started .terminal {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .features {
@@ -418,11 +417,11 @@ section.explore {
 }
 
 .seed-emoji {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 .seed-meta {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .org img {
@@ -471,8 +470,22 @@ section.explore {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1600px) {
+  .get-started {
+    width: 90%;
+    max-width: 90%;
+    padding: 5%;
+  }
+
+  .terminal {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 800px) {
   :root {
+    --font-size-large: 9vw;
     --font-size-medium: 1.1rem;
     --font-size-normal: 0.9rem;
     --font-size-small: 0.5vw;
@@ -489,6 +502,7 @@ section.explore {
   }
 
   h1 {
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
@@ -500,6 +514,10 @@ section.explore {
     width: 90%;
     max-width: 90%;
     padding: 5%;
+  }
+
+  .get-started-button {
+    display: none;
   }
 
   .terminal {

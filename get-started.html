@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
   <!-- HTML Meta Tags -->
-  <title>Radicle Network • Publish and share your code on the Radicle network.</title>
-  <meta name="description" content="Publish and share your code on the Radicle network.">
+  <title>Radicle: Sovereign code infrastructure</title>
+  <meta name="description" content="Sovereign code infrastructure">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <link rel="shortcut icon" href="assets/favicon.png">
 
   <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="http://radicle.network">
+  <meta property="og:url" content="https://radicle.network">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Radicle Network">
-  <meta property="og:description" content="Publish and share your code on the Radicle network.">
-  <meta property="og:image" content="http://radicle.network/assets/share.png">
+  <meta property="og:title" content="Radicle">
+  <meta property="og:description" content="Sovereign code infrastructure">
+  <meta property="og:image" content="https://radicle.network/assets/share.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="http://radicle.network">
-  <meta property="twitter:url" content="http://radicle.network/">
-  <meta name="twitter:title" content="Radicle Network">
-  <meta name="twitter:description" content="Publish and share your code on the Radicle network.">
-  <meta name="twitter:image" content="http://radicle.network/assets/share.png">
+  <meta property="twitter:domain" content="https://radicle.network">
+  <meta property="twitter:url" content="https://radicle.network/">
+  <meta name="twitter:title" content="Radicle">
+  <meta name="twitter:description" content="Sovereign code infrastructure">
+  <meta name="twitter:image" content="https://radicle.network/assets/share.png">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -40,8 +40,14 @@
       <h1>Get started with <span class="headline-yellow-bg">Radicle</span></h1>
       <ol>
         <li>
-          Download and install the <code>radicle-client-tools</code> CLI <a href="#">here</a>.
-          <p class="note">Radicle was designed to be used on the CLI, both offline and online.</p>
+          Install the Radicle <code>rad</code> CLI.
+          <p class="note">To install from <strong>📦 source</strong> run:</p>
+          <pre class="terminal">
+$ cargo install --force --locked --git https://seed.alt-clients.radicle.xyz/radicle-client-tools.git radicle-tools</pre>
+          <p class="note">To install with <strong>🍺 Homebrew</strong>, run:</p>
+          <pre class="terminal">
+$ brew tap radicle/client-tools https://seed.alt-clients.radicle.xyz/radicle-client-tools.git
+$ brew install radicle/client-tools/radicle-tools</pre>
         </li>
         <li>
           Run <code>rad auth</code> to create your Radicle identity.
@@ -66,7 +72,7 @@ Your personal 🌱 URN is <span class="terminal-highlight">rad:git:hnrkmx6trm4bu
         <li>
           Navigate to an existing <strong>git repository</strong> on your device.
           <p class="note">Radicle is built around git.</p>
-          <pre class="terminal">$ cd radicle-client-services</pre>
+          <pre class="terminal">$ cd acme</pre>
         </li>
 
         <li>
@@ -75,22 +81,22 @@ Your personal 🌱 URN is <span class="terminal-highlight">rad:git:hnrkmx6trm4bu
           repository that can be shared on the network, and associates your radicle key with it.</p>
           <pre class="terminal">
 $ rad init
-Initializing local 🌱 project <span class="terminal-highlight">radicle-client-services</span>
+Initializing local 🌱 project <span class="terminal-highlight">acme</span>
 
-<span class="terminal-highlight">ok</span> Description · <span class="terminal-dim">Radicle's client services</span>
-<span class="terminal-highlight">ok</span> Default branch · <span class="terminal-dim">master</span>
+<span class="terminal-highlight">ok</span> Description · <span class="terminal-dim">The Acme Corporation is an ironic name for the fictional corporation</span>
+<span class="terminal-highlight">ok</span> Default branch · <span class="terminal-dim">main</span>
 <span class="terminal-highlight">ok</span> Initializing new project...
-<span class="terminal-highlight">ok</span> Project initialized: <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo</span>
+<span class="terminal-highlight">ok</span> Project initialized: <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo</span>
 
 <span class="terminal-highlight-blue">=></span> To publish, run <span class="terminal-highlight-blue">`rad push`</span>.</pre>
         </li>
         <li>
-          Run <code>rad push</code> to publish to the network
+          Run <code>rad push</code> to publish to the network.
           <p class="note">
             The first time you push, you will be asked to select a seed node to push to.
             To push to your own seed, specify its address with the <code>--seed</code> option.
           </p>
-<pre class="terminal">
+          <pre class="terminal">
 $ rad push
 Pushing 🌱 to remote `rad`<span class="terminal-dim">
 Everything up-to-date</span>
@@ -99,16 +105,13 @@ Git version 2.34.1
 Select a seed node to sync with...
 <span class="terminal-yellow">* pine.radicle.garden</span>
 <span class="terminal-yellow">* <span class="terminal-selected">willow.radicle.garden</span></span>
-<span class="terminal-yellow">* maple.radicle.garden</span>
-</pre>
-</li>
+<span class="terminal-yellow">* maple.radicle.garden</span></pre>
+          <p class="note">Your code will be synced and available on the network via the web or git.</p>
 
-<li>
-  Your code is synced to the seed and available via the web, or via git.
-<pre class="terminal">
+          <pre class="terminal">
 Git signing key <span class="terminal-dim">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL460KIEccS4881p7PPpiiQBsxF+H5tgC6De6crw9rbU</span>
 
-Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo</span> to <span class="terminal-highlight">https://willow.radicle.garden</span>
+Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo</span> to <span class="terminal-highlight">https://willow.radicle.garden</span>
 
 <span class="terminal-highlight">ok</span> Syncing delegate identity hnrkqdpm9ub19oc8dccx44echy76hzfsezyio...
 <span class="terminal-highlight">ok</span> Syncing project identity...
@@ -118,13 +121,71 @@ Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54
 
 🌱 Your project is synced and available at:
 
-    (web) <span class="terminal-highlight">https://app.radicle.network/seeds/willow.radicle.garden/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo/</span>
-    (git) <span class="terminal-highlight">https://willow.radicle.garden/hnrkqi6ohci9m59i54ppiy3fqkedkjt99ymdo.git</span>
-</pre>
+    (web) <span class="terminal-highlight">https://app.radicle.network/seeds/willow.radicle.garden/rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo/</span>
+    (git) <span class="terminal-highlight">https://willow.radicle.garden/hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo.git</span></pre>
+        </li>
+
+        <li>
+          Share your project with friends.
+          <p class="note">
+          Anyone can clone your project via <code>rad clone</code> given the
+          project <strong>URN</strong> and a <strong>seed</strong> to clone
+          from. To clone the above project, run:
+          </p>
+          <pre class="terminal">
+$ rad clone rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo --seed willow.radicle.garden
+
+Git version 2.35.1
+
+Syncing 🌱 project <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo</span> from <span class="terminal-highlight">https://willow.radicle.garden/</span>
+
+<span class="terminal-highlight">ok</span> Fetching project identity...
+<span class="terminal-highlight">ok</span> Fetching project delegate hnrkqdpm9ub19oc8dccx44echy76hzfsezyio...
+<span class="terminal-highlight">ok</span> Verifying...
+<span class="terminal-highlight">ok</span> Fetching default remotes...
+
+Initializing local checkout for 🌱 <span class="terminal-highlight">rad:git:hnrkqi6ohci9m59i54ppiy3fqkedkjt98ymdo</span> (acme)
+
+<span class="terminal-highlight">ok</span> Local master branch found...
+<span class="terminal-highlight">ok</span> Performing checkout...
+<span class="terminal-highlight">ok</span> Remote-tracking branch <span class="terminal-highlight">koops/main</span> created for hyn9diw…zo645pe
+<span class="terminal-highlight">ok</span> Local repository seed for <span class="terminal-highlight">acme</span> set to <span class="terminal-highlight">https://willow.radicle.garden/</span>
+<span class="terminal-highlight">ok</span> Tracking for project delegates configured
+
+🌱 Project clone successful under ./<span class="terminal-highlight">acme</span>
+          </pre>
+        </li>
+        <li>
+          All set 🌱
+          <p class="note">Run <code>rad help</code> to see what additional commands
+          are available.</p>
+
+          <pre class="terminal">
+Usage: rad <command> [--help]
+Common `rad` commands used in various situations:
+
+    <strong>auth</strong>         <span class="terminal-dim">Manage radicle identities and profiles</span>
+    <strong>init</strong>         <span class="terminal-dim">Initialize radicle projects from git repositories</span>
+    <strong>show</strong>         <span class="terminal-dim">Show contextual information pertaining to radicle</span>
+    <strong>account</strong>      <span class="terminal-dim">Manage radicle ethereum accounts</span>
+    <strong>clone</strong>        <span class="terminal-dim">Clone radicle projects</span>
+    <strong>ls</strong>           <span class="terminal-dim">List radicle projects and other objects</span>
+    <strong>remote</strong>       <span class="terminal-dim">Manage radicle remotes</span>
+    <strong>push</strong>         <span class="terminal-dim">Publish radicle projects to the network</span>
+    <strong>checkout</strong>     <span class="terminal-dim">Checkout a radicle project working copy</span>
+    <strong>track</strong>        <span class="terminal-dim">Manage radicle project tracking relationships</span>
+    <strong>untrack</strong>      <span class="terminal-dim">Untrack radicle project peers</span>
+    <strong>sync</strong>         <span class="terminal-dim">Synchronize radicle projects with seeds</span>
+    <strong>ens</strong>          <span class="terminal-dim">Manage your radicle ENS records</span>
+    <strong>help</strong>         <span class="terminal-dim">Radicle tools help</span>
+
+See `rad <command> --help` to learn about a specific command.</pre>
         </li>
       </ol>
-    </div><!-- closes get started -->
-
-  </div><!-- closes container -->
-  </body>
-  </html>
+    </div>
+  </div>
+  <section class="footer">
+    <p>Developed by the Radicle 🌱 <a href="https://app.radicle.network/alt-clients.radicle.eth">alt.-clients</a> team.</p>
+  </section>
+</body>
+</html>
