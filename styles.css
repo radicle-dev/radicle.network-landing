@@ -104,8 +104,8 @@ span.headline-emoji::after {
   content: "✨";
   position: absolute;
   margin-left: -24%;
-  margin-top: -2%;
-  font-size: 6vw;
+  margin-top: -1%;
+  font-size: 4vw;
 }
 
 span.headline-yellow-bg {
