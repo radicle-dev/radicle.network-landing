@@ -190,7 +190,7 @@ a {
   flex-direction: column;
 }
 
-button {
+button, a.button {
   background: transparent;
   border: 1px solid var(--color-foreground-6);
   color: var(--color-foreground-6);
@@ -203,7 +203,7 @@ button {
   width: fit-content;
 }
 
-button:hover {
+button:hover, a.button:hover {
   background-color: var(--color-foreground-6);
   color: var(--color-background);
 }
@@ -219,32 +219,32 @@ button:hover {
   cursor: pointer;
 }
 
-button.no-border {
+button.no-border, a.button.no-border {
   border: none;
 }
 
-button.no-border:hover {
+button.no-border:hover, a.button.no-border:hover {
   color: var(--color-foregorund-6);
   background: none;
 }
 
-button.primary {
+button.primary, a.button.primary {
   border: none;
   color: var(--color-background);
   font-weight: 600;
   background: linear-gradient(80deg, #5555ff, 20%, #ff55ff);
 }
 
-button.primary:hover {
+button.primary:hover, a.button.primary:hover {
   box-shadow: 0 0 2rem #ff55ff77;
 }
 
-button.secondary {
+button.secondary, a.button.secondary {
   border: 1px solid var(--color-secondary);
   color: var(--color-secondary);
 }
 
-button.secondary:hover {
+button.secondary:hover, a.button.secondary:hover {
   background-color: var(--color-secondary);
   color: var(--color-background);
 }
@@ -283,7 +283,7 @@ section.cli-section {
   text-align: left;
   width: 25vw;
   max-width: 27rem;
-  padding-right: 2vw;
+  padding: 0 2vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -325,6 +325,7 @@ section.cli-section {
 
 .terminal {
   background-color: var(--color-black-30);
+  background-color: red;
   color: var(--color-foreground-6);
   border-radius: 0.5rem;
   padding: var(--border-radius-medium);
@@ -414,6 +415,14 @@ section.explore {
 
 .org:hover {
   background-color: var(--color-black-30);
+}
+
+.seed-emoji {
+	font-size: 3rem;
+}
+
+.seed-meta {
+	visibility: hidden;
 }
 
 .org img {
