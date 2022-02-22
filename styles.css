@@ -70,7 +70,7 @@ html {
   --color-shadow: rgba(0, 0, 0, 0.2);
   --color-glow: #5555ff22;
   --font-family-sans-serif: Inter, sans-serif;
-  --font-family-monospace: "Cascadia Code";
+  --font-family-monospace: "Cascadia Code", monospace;
   --font-weight-medium: 600;
   --font-weight-bold: 700;
   --font-size-large: 8vw;
