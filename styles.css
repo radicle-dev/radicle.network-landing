@@ -263,7 +263,7 @@ header {
 }
 
 header p {
-  max-width: 45rem;
+  max-width: 55rem;
   color: var(--color-foreground);
   margin-bottom: 2rem;
 }
