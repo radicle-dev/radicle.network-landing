@@ -1,4 +1,4 @@
 # radicle.network-landing
-The landing page for radicle.network. It's just HTML and CSS, just open the index.html file in a browser.
+The landing page for radicle.network. Just run a simple server (e.g. `python -m SimpleHTTPServer 7800`) to view the site.
 
-![image](https://user-images.githubusercontent.com/4406983/154379338-cc4c94ee-0829-4731-80de-9e45a8c878b4.png)
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/4406983/155273362-7ba3ce74-da64-41d5-8250-c127d993ece7.png">
